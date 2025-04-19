@@ -19,3 +19,11 @@ jobs:
           GIST_ID: 89f1a1c7ddfa6c9c35a6efae1d536cf7
           USER_ID: 3900516248
           USER_TOKEN: ${{ secrets.USER_TOKEN }}
+  keepalive-job:
+    name: Keepalive Workflow
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
